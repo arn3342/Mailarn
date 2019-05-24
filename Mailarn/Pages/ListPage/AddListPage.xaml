@@ -1,0 +1,22 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Mailarn.Pages.ListPage"
+      xmlns:Controlpack="clr-namespace:Controlpack;assembly=Controlpack" x:Class="Mailarn.Pages.ListPage.AddListPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddListPage" Background="White" Loaded="Page_Loaded">
+    <Grid>
+
+        <Controlpack:ExtendedTextbox x:Name="ListNameTb" Width="276" DisplayText="List name" Margin="40,89,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32"/>
+        <TextBlock x:Name="PageHeader" HorizontalAlignment="Left" Margin="40,23,0,0" TextWrapping="Wrap" FontSize="24" FontFamily="Segoe UI SemiLight" Text="CREATE NEW LIST" VerticalAlignment="Top" Foreground="#FF838383"/>
+        <Controlpack:ExtendedTextbox x:Name="ListDtlsTb" DisplayText="List details" MaxLength="400" Margin="40,133,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="79" Width="377"/>
+        <Controlpack:BigButton x:Name="BackBtn" Height="34" Width="25" Background="White" ImgHorizontalAlignment="Left" ImgWidth="15" ImgHeight="15" ImgOpacity="1" ImgSource="/Mailarn;component/icos/backbtn.png" ImgMLOpacity="1" ImgMOOpacity="1" MouseEnterColor="#FFDBDBDB" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,24,0,0" FontFamily="Segoe UI Semibold" Foreground="White" MouseDown="BackBtn_MouseDown"/>
+        <Controlpack:ExtendedTextbox x:Name="EMailIdstb" Width="276" DisplayText="Email ID(s)" Margin="40,224,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32"/>
+        <Controlpack:BigButton x:Name="AddListBtn" Height="36" Width="81" Background="#FF00B9FF" ImgHorizontalAlignment="Left" DisplayText="SAVE" ImgWidth="15" ImgHeight="15" ImgOpacity="1" ImgSource="/Mailarn;component/icos/add.png" ImgMLOpacity="1" ImgMOOpacity="1" MouseEnterColor="#FF008CC1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,275,0,0" FontFamily="Segoe UI Semibold" Foreground="White" MouseDown="AddCampBtn_MouseDown"/>
+        <Controlpack:BigButton x:Name="DeleteBtn" Height="36" Width="81" Background="#FF00B9FF" ImgHorizontalAlignment="Left" DisplayText="DELETE" ImgWidth="15" ImgHeight="15" ImgOpacity="1" ImgSource="/Mailarn;component/icos/delete.png" Visibility="Hidden" ImgMLOpacity="1" ImgMOOpacity="1" MouseEnterColor="#FF008CC1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="138,275,0,0" FontFamily="Segoe UI Semibold" Foreground="White" MouseDown="DeleteBtn_MouseDown"/>
+
+    </Grid>
+</Page>

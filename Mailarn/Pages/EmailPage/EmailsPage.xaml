@@ -1,0 +1,46 @@
+﻿<Page x:Class="Mailarn.Pages.EmailPage.EmailsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:Controlpack="clr-namespace:Controlpack;assembly=Controlpack"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Mailarn.Pages.EmailPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EmailsPage" Background="White" Loaded="Page_Loaded">
+    <Grid>
+        <DataGrid x:Name="dgv" CanUserAddRows="False" AutoGenerateColumns="False" Background="White" BorderBrush="{x:Null}" Margin="5,45,5,5">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Email ID">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Padding="8,5,5,5" Text="{Binding Eml_Id}" MouseDown="TextBlock_MouseDown"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="First name">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Padding="8,5,5,5" Text="{Binding F_Name}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Last name">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Padding="8,5,5,5" Text="{Binding L_Name}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Email address">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Padding="8,5,5,5" Text="{Binding Email_Add}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Controlpack:BigButton x:Name="NewEmailBtn" Height="36" Width="113" Background="#FF00B9FF" ImgHorizontalAlignment="Left" DisplayText="NEW EMAIL" ImgWidth="15" ImgHeight="15" ImgOpacity="1" ImgSource="/icos/add.png" ImgMLOpacity="1" ImgMOOpacity="1" MouseEnterColor="#FF008CC1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,6,0,0" FontFamily="Segoe UI Semibold" Foreground="White" MouseDown="NewEmailBtn_MouseDown"/>
+    </Grid>
+</Page>

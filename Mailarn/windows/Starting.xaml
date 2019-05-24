@@ -1,0 +1,14 @@
+﻿<Window x:Class="Mailarn.Starting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mailarn"
+        xmlns:WaitProgressBar="clr-namespace:Controlpack;assembly=Controlpack"
+        mc:Ignorable="d"
+        Title="Starting" Height="230" Width="405" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF45A5FF" Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock Text="Mailarn" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" Margin="123,29,123.333,137" FontFamily="Segoe UI Light" Foreground="White"/>
+        <WaitProgressBar:LinearProgressbar x:Name="Loading" DisplayText="Loading servers..." HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,110,60.333,46" WaitingLineColor="White" ForeColor="White"/>
+    </Grid>
+</Window>
